@@ -11,29 +11,36 @@
 			<div class="separator"></div>
 			<div class="result"></div>
 		</div>
+			
 		<div class="keys">
-			<button class="key clear" value="C">C</button>
-			<button class="key operator" value="(">(</button>
-			<button class="key operator" value=")">)</button>
-			<button class="key operator" value="%">%</button>
-			<button class="key" value="7">7</button>
-			<button class="key" value="8">8</button>
-			<button class="key" value="9">9</button>
-			<button class="key operator" value="/">/</button>
-			<button class="key" value="4">4</button>
-			<button class="key" value="5">5</button>
-			<button class="key" value="6">6</button>
-			<button class="key operator" value="*">*</button>
-			<button class="key" value="1">1</button>
-			<button class="key" value="2">2</button>
-			<button class="key" value="3">3</button>
-			<button class="key operator" value="+">+</button>
-			<button class="key" value="0">0</button>
-			<button class="key" value=",">,</button>
-			<button class="key operator" value="-">-</button>
-			<button class="key calculate" value="=">=</button>
+			<input class="key operator" type="button" value="(" onclick="addToInput('(')" />
+			<input class="key operator" type="button" value=")" onclick="addToInput(')')" />
+			<input class="key clear" type="button" value="C" class="clear" onclick="clearInput()" />
+			<input class="key operator" type="button" value="/" onclick="addToInput('/')" />
+
+			<input class="key" type="button" value="7" onclick="addToInput('7')" />
+			<input class="key" type="button" value="8" onclick="addToInput('8')" />
+			<input class="key" type="button" value="9" onclick="addToInput('9')" />
+			<input class="key operator" type="button" value="*" class="operator" onclick="addToInput('*')" />
+
+			<input class="key" type="button" value="4" onclick="addToInput('4')" />
+			<input class="key" type="button" value="5" onclick="addToInput('5')" />
+			<input class="key" type="button" value="6" onclick="addToInput('6')" />
+			<input class="key" type="button" value="-" class="operator" onclick="addToInput('-')" />
+
+			<input class="key" type="button" value="1" onclick="addToInput('1')" />
+			<input class="key" type="button" value="2" onclick="addToInput('2')" />
+			<input class="key" type="button"value="3" onclick="addToInput('3')" />
+			<input class="key operator" type="button" value="+" class="operator" onclick="addToInput('+')" />
+
+			<input class="key" type="button" value="0" onclick="addToInput('0')" />
+			<input class="key" type="button" value="." onclick="addToInput('.')" />
+			<input class="key calculate" type="button" value="=" class="operator" onclick="computeResult()" />
 		</div>
+
+      
 	</div>
+
 	<script src="calculatrice.js"></script>
 </body>
 </html>
