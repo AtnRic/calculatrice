@@ -24,3 +24,5 @@ appui sur "="
 
 appui deux fois sur "<-" (retour au calcul précédent + suppression du dernier caractère)  
 ![alt text](https://github.com/AtnRic/calculatrice/blob/etape2/screens/Capture%20d%E2%80%99%C3%A9cran%20du%202023-03-27%2022-06-59.png)
+
+la couleur du bouton "-" sur les captures d'écran a été corrigée
