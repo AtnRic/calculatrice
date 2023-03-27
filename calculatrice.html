@@ -13,29 +13,30 @@
 		</div>
 			
 		<div class="keys">
-			<input class="key operator" type="button" value="(" onclick="addToInput('(')" />
-			<input class="key operator" type="button" value=")" onclick="addToInput(')')" />
-			<input class="key clear" type="button" value="C" class="clear" onclick="clearInput()" />
-			<input class="key operator" type="button" value="/" onclick="addToInput('/')" />
+			<input class="key operator" type="button" value="(" onclick="baseCalculator.addToInput('(')" />
+			<input class="key operator" type="button" value=")" onclick="baseCalculator.addToInput(')')" />
+			<input class="key clear" type="button" value="C" class="clear" onclick="baseCalculator.clearInput()" />
+			<input class="key operator" type="button" value="/" onclick="baseCalculator.addToInput('/')" />
 
-			<input class="key" type="button" value="7" onclick="addToInput('7')" />
-			<input class="key" type="button" value="8" onclick="addToInput('8')" />
-			<input class="key" type="button" value="9" onclick="addToInput('9')" />
-			<input class="key operator" type="button" value="*" class="operator" onclick="addToInput('*')" />
+			<input class="key" type="button" value="7" onclick="baseCalculator.addToInput('7')" />
+			<input class="key" type="button" value="8" onclick="baseCalculator.addToInput('8')" />
+			<input class="key" type="button" value="9" onclick="baseCalculator.addToInput('9')" />
+			<input class="key operator" type="button" value="*" class="operator" onclick="baseCalculator.addToInput('*')" />
 
-			<input class="key" type="button" value="4" onclick="addToInput('4')" />
-			<input class="key" type="button" value="5" onclick="addToInput('5')" />
-			<input class="key" type="button" value="6" onclick="addToInput('6')" />
-			<input class="key" type="button" value="-" class="operator" onclick="addToInput('-')" />
+			<input class="key" type="button" value="4" onclick="baseCalculator.addToInput('4')" />
+			<input class="key" type="button" value="5" onclick="baseCalculator.addToInput('5')" />
+			<input class="key" type="button" value="6" onclick="baseCalculator.addToInput('6')" />
+			<input class="key" type="button" value="-" class="operator" onclick="baseCalculator.addToInput('-')" />
 
-			<input class="key" type="button" value="1" onclick="addToInput('1')" />
-			<input class="key" type="button" value="2" onclick="addToInput('2')" />
-			<input class="key" type="button"value="3" onclick="addToInput('3')" />
-			<input class="key operator" type="button" value="+" class="operator" onclick="addToInput('+')" />
+			<input class="key" type="button" value="1" onclick="baseCalculator.addToInput('1')" />
+			<input class="key" type="button" value="2" onclick="baseCalculator.addToInput('2')" />
+			<input class="key" type="button"value="3" onclick="baseCalculator.addToInput('3')" />
+			<input class="key operator" type="button" value="+" class="operator" onclick="baseCalculator.addToInput('+')" />
 
-			<input class="key" type="button" value="0" onclick="addToInput('0')" />
-			<input class="key" type="button" value="." onclick="addToInput('.')" />
-			<input class="key calculate" type="button" value="=" class="operator" onclick="computeResult()" />
+			<input class="key" type="button" value="0" onclick="baseCalculator.addToInput('0')" />
+			<input class="key" type="button" value="." onclick="baseCalculator.addToInput('.')" />
+			<input class="key calculate" type="button" value="=" class="operator" onclick="baseCalculator.computeResult()" />
+			<input class="key operator" type="button" value="<-" class="operator" onclick="baseCalculator.removeLastInput()" />
 		</div>
 
       
