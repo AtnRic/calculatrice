@@ -1,15 +1,14 @@
 import { Injectable } from '@nestjs/common';
-//import { ErrorOc } from './error-oc.model';
 import { ErrorOc } from './error-oc.entity';
+import { error } from 'console';
 
 @Injectable()
 export class ErrorOcService {
-  async createErrorOc(id: number, timestamp: Date): Promise<ErrorOc> {
-    const error = new ErrorOc();
-    error.id = id;
-    error.timestamp = timestamp;
-
-    await error.save();
-    return error;
+  async createErrorOc(timestamp: Date): Promise<ErrorOc> {
+    const errorOc = new ErrorOc();
+    errorOc.timestamp = timestamp;
+    // Faire ici toutes les opérations nécessaires pour créer et sauvegarder l'objet Success
+    // Par exemple : await success.save();
+    return errorOc;
   }
 }

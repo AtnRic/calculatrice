@@ -3,9 +3,9 @@ import { Success } from './success.entity';
 
 @Injectable()
 export class SuccessService {
-  async createSuccess(timeTaken: number): Promise<Success> {
+  async createSuccess(timeTakenMs: number): Promise<Success> {
     const success = new Success();
-    success.timeTakenMs = timeTaken;
+    success.timeTakenMs = timeTakenMs;
     // Faire ici toutes les opérations nécessaires pour créer et sauvegarder l'objet Success
     // Par exemple : await success.save();
     return success;

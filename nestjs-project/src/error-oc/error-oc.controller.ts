@@ -1,18 +1,21 @@
 import { Body, Controller, Get, Post } from '@nestjs/common';
 import { ErrorOc } from './error-oc.model';
+import { ErrorOcService } from './error-oc.service';
+import { time } from 'console';
 
-@Controller('error-oc')
+@Controller('errorOc')
 export class ErrorOcController {
+  ErrorOcService: any;
+  constructor(private readonly errorOcService: ErrorOcService) {}
+
   @Post()
-  errorOc(
-    // @Body('id') id: number, car auto-increment
-    @Body('timestamp') timestamp: Date,
-  ): Promise<ErrorOc> {
-    return this.errorOc(timestamp);
-    //return this.ErrorOcService.createErrorOc(timestamp);
+  async createSuccess(@Body('timestamp') timestamp: Date): Promise<ErrorOc> {
+    console.log('error');
+    return this.errorOcService.createErrorOc(timestamp);
   }
+
   @Get()
-  getError(): string {
+  getSuccess(): string {
     return 'error';
   }
 }
