@@ -7,7 +7,8 @@ export class SuccessService {
     const success = new Success();
     success.timeTakenMs = timeTakenMs;
     // Faire ici toutes les opérations nécessaires pour créer et sauvegarder l'objet Success
-    // Par exemple : await success.save();
+
+    // await success.save();
     return success;
   }
 }

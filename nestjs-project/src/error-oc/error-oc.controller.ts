@@ -1,4 +1,4 @@
-import { Body, Controller, Get, Post, Query } from '@nestjs/common';
+import { Body, Controller, Get, Post } from '@nestjs/common';
 import { ErrorOc } from './error-oc.model';
 import { ErrorOcService } from './error-oc.service';
 
