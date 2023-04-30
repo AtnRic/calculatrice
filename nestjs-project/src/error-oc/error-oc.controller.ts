@@ -1,7 +1,6 @@
-import { Body, Controller, Get, Post } from '@nestjs/common';
+import { Body, Controller, Get, Post, Query } from '@nestjs/common';
 import { ErrorOc } from './error-oc.model';
 import { ErrorOcService } from './error-oc.service';
-import { time } from 'console';
 
 @Controller('errorOc')
 export class ErrorOcController {
@@ -10,12 +9,12 @@ export class ErrorOcController {
 
   @Post()
   async createSuccess(@Body('timestamp') timestamp: Date): Promise<ErrorOc> {
-    console.log('error');
-    return this.errorOcService.createErrorOc(timestamp);
+    console.log('error', timestamp);
+    return this.errorOcService.createErrorOc(new Date(timestamp));
   }
 
   @Get()
-  getSuccess(): string {
+  getErrorOc(): string {
     return 'error';
   }
 }

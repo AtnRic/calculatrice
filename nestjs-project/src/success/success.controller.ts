@@ -1,4 +1,4 @@
-import { Body, Controller, Get, Post } from '@nestjs/common';
+import { Body, Controller, Get, Post, Query } from '@nestjs/common';
 import { Success } from './success.model';
 import { SuccessService } from './success.service';
 
@@ -11,14 +11,10 @@ export class SuccessController {
   async createSuccess(
     @Body('timeTakenMs') timeTakenMs: number,
   ): Promise<Success> {
-    console.log('success');
+    console.log('success', timeTakenMs);
     return this.successService.createSuccess(timeTakenMs);
   }
-  // @Post()
-  // success(@Body('timeTaken') timeTaken: number): Promise<Success> {
-  //   console.log('success');
-  //   return this.SuccessService.createSuccess(timeTaken);
-  // }
+
   @Get()
   getSuccess(): string {
     return 'success';

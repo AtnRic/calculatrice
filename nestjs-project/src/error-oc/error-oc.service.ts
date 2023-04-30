@@ -1,6 +1,5 @@
 import { Injectable } from '@nestjs/common';
 import { ErrorOc } from './error-oc.entity';
-import { error } from 'console';
 
 @Injectable()
 export class ErrorOcService {
