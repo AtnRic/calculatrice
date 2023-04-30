@@ -1,18 +1,26 @@
 import { Body, Controller, Get, Post } from '@nestjs/common';
 import { Success } from './success.model';
+import { SuccessService } from './success.service';
+
 @Controller('success')
 export class SuccessController {
   SuccessService: any;
+  constructor(private readonly successService: SuccessService) {}
+
   @Post()
-  success(
-    // @Body('id') id: number, car auto-increment
-    @Body('timeTaken') timeTaken: number,
+  async createSuccess(
+    @Body('timeTakenMs') timeTakenMs: number,
   ): Promise<Success> {
     console.log('success');
-    return this.SuccessService.createSuccess(timeTaken);
+    return this.successService.createSuccess(timeTakenMs);
   }
+  // @Post()
+  // success(@Body('timeTaken') timeTaken: number): Promise<Success> {
+  //   console.log('success');
+  //   return this.SuccessService.createSuccess(timeTaken);
+  // }
   @Get()
-  getError(): string {
-    return 'error';
+  getSuccess(): string {
+    return 'success';
   }
 }
